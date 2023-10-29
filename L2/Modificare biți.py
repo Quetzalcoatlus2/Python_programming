@@ -3,7 +3,7 @@ bitNumber1 = 3
 bitNumber2 = 2
 
 #Se afiseaza valoarea bitului indicat
-rezultat = 1==(x>>bitNumber & 1)
+rezultat = 1==(x>>bitNumber1 & 1)
 print(rezultat)
 
 print(bin(x))
@@ -21,5 +21,5 @@ rezultat = x ^ (1<<bitNumber1)
 print(rezultat)
 
 #Aceasta linie transforma simultan 2 biti
-rezultat = x ^ ((1<<bitNumber1)|1<<bitNumber2))
+rezultat = x ^ ((1<<bitNumber1)|(1<<bitNumber2))
 print(rezultat)
