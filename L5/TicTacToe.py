@@ -27,17 +27,17 @@ def selectiePozitie(tabla, simbolJucator, marimeTabla) -> int:
     return pozitie
 
 def algVerificareLinii(ListPozitii):
-     if listPozitii.__contains__('_') == False: #excluderea cazului în care pe pozițiile tablei se găsește simbolul
-        for index in range(0, len(listPozitii) - 1):
+     if ListPozitii.__contains__('_') == False: #excluderea cazului în care pe pozițiile tablei se găsește simbolul
+        for index in range(0, len(ListPozitii) - 1):
             if index + 1 != marimeTabla - 1: #excluderea cazului în care index este la capătul listei
-                if listPozitii[index] != listPozitii[index + 1]: #dacă două poziții sunt diferite în ceea ce privește caracterele, nu mai are rost să continue bucla
+                if ListPozitii[index] != ListPozitii[index + 1]: #dacă două poziții sunt diferite în ceea ce privește caracterele, nu mai are rost să continue bucla
                     break
             else:
-                if listPozitii[index] listPozitii[index + 1]:              #dacă verificarea ajunge la final, înseamnă că pozițiile din listă au acelasi
-               return 1                                                    #caracter și se returnează 1 care manchează încheierea jocului
+                if ListPozitii[index] == ListPozitii[index + 1]:              #dacă verificarea ajunge la final, înseamnă că pozițiile din listă au acelasi
+                    return 1                                                    #caracter și se returnează 1 care manchează încheierea jocului
 
 
-def creareList(startIndex, maxIndex increment, tabla):
+def creareList(startIndex, maxIndex, increment, tabla):
     listPozitii = []
     index = startIndex
 
