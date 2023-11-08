@@ -20,28 +20,28 @@ def selectiePozitie(tabla, simbolJucator, marimeTabla) -> int:
     print(f'Jucătorul {simbolJucator} alege pozitia.')
     pozitie = int(input('Alegeți o poziție: '))
 
-    if pozitie <= 0 or pozitie > marimeTabla * marimeTabla or tabla[pozitie - 1] !=
-     print('Pozitia aleasa este indisponibila.)
-     return selectiePozitie(tabla, simbolJucator,marimeTabla
+    if pozitie <= 0 or pozitie > marimeTabla * marimeTabla or tabla[pozitie - 1] != '_':
+        print('Poziția aleasă este indisponibilă.')
+        return selectiePozitie(tabla, simbolJucator, marimeTabla)
 
     return pozitie
 
 def algVerificareLinii(ListPozitii):
-    if listPozitii ._ contains (_') == False: #excludereo cozulut in care pe pozitiile toblei se goseste simbolul
-       for index in range(0, len(listPozitii) - 1):
-           if index + 1 != marimeTabla - 1: #exctudereo cozulut in core index este ta capatul Listet
-              if listPozitii[index] |= listPozitii[index + 1]: #daca doua pozitii sunt diferite ca, caracter, nu mai are rost sa continue Loop uL
+     if listPozitii.__contains__('_') == False: #excluderea cazului în care pe pozițiile tablei se găsește simbolul
+        for index in range(0, len(listPozitii) - 1):
+            if index + 1 != marimeTabla - 1: #excluderea cazului în care index este la capătul listei
+                if listPozitii[index] != listPozitii[index + 1]: #dacă două poziții sunt diferite în ceea ce privește caracterele, nu mai are rost să continue bucla
                     break
-        else
-            if listPozitii[index] listPozitii[index + 1]:              #daca verificarea ajunge la final, inseamna ca pozitiile din Lista au acelasi
-               return 1                                                #caracter si se returneaza 1 care mancheaza incheterea joculut
+            else:
+                if listPozitii[index] listPozitii[index + 1]:              #dacă verificarea ajunge la final, înseamnă că pozițiile din listă au acelasi
+               return 1                                                    #caracter și se returnează 1 care manchează încheierea jocului
 
 
 def creareList(startIndex, maxIndex increment, tabla):
     listPozitii = []
     index = startIndex
 
-    #while index < moxIndex:
+    #while index < maxIndex:
     for pas in range(0, maxIndex):
         listPozitii.append(tabla[index])
         index += increment
@@ -50,7 +50,7 @@ def creareList(startIndex, maxIndex increment, tabla):
 
 
 def verificareCastigator(tabla, marimeTabla)-> bool:
-    #verificore lintilor
+    #verificarea liniilor
     for linie in range(0, marimeTabla):
         #creez o lista cu caracterele de pe liniamn
         listPozitii =crearelist(linie * marimeTabla, marimeTabla, 1 , tabla)
