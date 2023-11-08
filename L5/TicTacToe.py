@@ -36,5 +36,48 @@ def algVerificareLinii(ListPozitii):
             if listPozitii[index] listPozitii[index + 1]:              #daca verificarea ajunge la final, inseamna ca pozitiile din Lista au acelasi
                return 1                                                #caracter si se returneaza 1 care mancheaza incheterea joculut
 
+
+def creareList(startIndex, maxIndex increment, tabla):
+    listPozitii = []
+    index = startIndex
+
+    #while index < moxIndex:
+    for pas in range(0, maxIndex):
+        listPozitii.append(tabla[index])
+        index += increment
+
+return listPozitii
+
+def verificareCastigator(tabla, marimeTabla)
+-> bool:
+
+
+#verificore lintilor
+for linie in range(0, marimeTabla):
+#cneez o lista cu caracterele de pe liniamn
+listPozitii =crearelist(linie * marimeTabla, marimeTabla, 1 , tabla)
+#TODO: folosit doar pentru afisarea continutului listei la verificarea Lintilor
+print(f'Linii verticale: {listPozitii}*)
+#verificare daca pe Linia n este aceasi secventa de caractere
+if algVerificareLinii(listPozitii) == 1: return True
+
+#verificarea coloanelor
+for coloana in range(0, marimeTabla):
+#crearea Listei cu cdracterele de pe coloana n
+listPozitii = creareList(coloana, marimeTabla, marimeTabla, tabla)
+#TODO: folosit doar pentru afisarea continutulut array utut la verificarea tintilor
+print(f'Linii orizontale: {listPozitii}')
+#vedificare daca pe coloona n este aceasi secventa de caractere
+if algVerificareLinii(listPozitii) == 1: return True
+
+#verificane diagonata principata
+#crearea Listei cu caracterele de pe diagonala principala
+listPozitii = creareList(0, marimeTabla, marimeTabla + 1, tabla)
+#TODO: folosit doar pentru ofisareo continutului array ului la verificarea Lintilor
+print(f'Linii diagonala principala: {listPozitii}')
+#verificare daca pe diagonala principala este aceasi secventa de caractere
+if algVerificareLinii(listPozitii) == 1: return True
+
+#verificane diagonata secundara
                 
 
