@@ -46,38 +46,36 @@ def creareList(startIndex, maxIndex increment, tabla):
         listPozitii.append(tabla[index])
         index += increment
 
-return listPozitii
-
-def verificareCastigator(tabla, marimeTabla)
--> bool:
+    return listPozitii
 
 
-#verificore lintilor
-for linie in range(0, marimeTabla):
-#cneez o lista cu caracterele de pe liniamn
-listPozitii =crearelist(linie * marimeTabla, marimeTabla, 1 , tabla)
-#TODO: folosit doar pentru afisarea continutului listei la verificarea Lintilor
-print(f'Linii verticale: {listPozitii}*)
-#verificare daca pe Linia n este aceasi secventa de caractere
-if algVerificareLinii(listPozitii) == 1: return True
+def verificareCastigator(tabla, marimeTabla)-> bool:
+    #verificore lintilor
+    for linie in range(0, marimeTabla):
+        #creez o lista cu caracterele de pe liniamn
+        listPozitii =crearelist(linie * marimeTabla, marimeTabla, 1 , tabla)
+        #TODO: folosit doar pentru afisarea continutului listei la verificarea Lintilor
+        print(f'Linii verticale: {listPozitii}*)
+        #verificare daca pe Linia n este aceasi secventa de caractere
+        if algVerificareLinii(listPozitii) == 1: return True
 
-#verificarea coloanelor
-for coloana in range(0, marimeTabla):
-#crearea Listei cu cdracterele de pe coloana n
-listPozitii = creareList(coloana, marimeTabla, marimeTabla, tabla)
-#TODO: folosit doar pentru afisarea continutulut array utut la verificarea tintilor
-print(f'Linii orizontale: {listPozitii}')
-#vedificare daca pe coloona n este aceasi secventa de caractere
-if algVerificareLinii(listPozitii) == 1: return True
+    #verificarea coloanelor
+    for coloana in range(0, marimeTabla):
+        #crearea Listei cu cdracterele de pe coloana n
+        listPozitii = creareList(coloana, marimeTabla, marimeTabla, tabla)
+        #TODO: folosit doar pentru afisarea continutulut array utut la verificarea tintilor
+        print(f'Linii orizontale: {listPozitii}')
+        #verificare daca pe coloana n este aceeasi secventa de caractere
+        if algVerificareLinii(listPozitii) == 1: return True
 
-#verificane diagonata principata
-#crearea Listei cu caracterele de pe diagonala principala
-listPozitii = creareList(0, marimeTabla, marimeTabla + 1, tabla)
-#TODO: folosit doar pentru ofisareo continutului array ului la verificarea Lintilor
-print(f'Linii diagonala principala: {listPozitii}')
-#verificare daca pe diagonala principala este aceasi secventa de caractere
-if algVerificareLinii(listPozitii) == 1: return True
+    #verificane diagonata principata
+    #crearea Listei cu caracterele de pe diagonala principala
+    listPozitii = creareList(0, marimeTabla, marimeTabla + 1, tabla)
+    #TODO: folosit doar pentru ofisareo continutului array ului la verificarea Lintilor
+    print(f'Linii diagonala principala: {listPozitii}')
+    #verificare daca pe diagonala principala este aceasi secventa de caractere
+    if algVerificareLinii(listPozitii) == 1: return True
 
-#verificane diagonata secundara
+    #verificane diagonala secundara
                 
 
