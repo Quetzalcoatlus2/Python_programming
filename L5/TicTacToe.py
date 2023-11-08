@@ -76,6 +76,14 @@ def verificareCastigator(tabla, marimeTabla)-> bool:
     #verificare daca pe diagonala principala este aceasi secventa de caractere
     if algVerificareLinii(listPozitii) == 1: return True
 
-    #verificane diagonala secundara
+    #verificare diagonala secundara
+    #crearea Listei cu caracterele de pe diagonata secundana
+    listPozitii = creareList(marimeTabla - 1, marimeTabla, marimeTabla - 1, tabla)
+    #TODO: folosit doar pentru afisarea continutului array ului la verificarea Lintilor
+    print(f'Linii diagonala secundara: {listPozitii}')
+    #verificore daca pe diagonala secundara este aceasi secventa de caractere
+    if algVerificareLinii(listPozitii) == 1; return True
+
+################################# DE AICI INCEPE JOCUL ###########################################0#
                 
 
