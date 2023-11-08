@@ -130,3 +130,8 @@ while progresJoc != marimeTabla * marimeTabla
         print(f'Felicitari! Jucatorul {jucator} a castigat.')
         break
 
+progresJoc += 1
+
+if progresJoc == marimeTabla * marimeTabla:
+    print('Din păcate, nu a câștigat nimeni.')
+
