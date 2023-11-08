@@ -52,82 +52,82 @@ def creareList(startIndex, maxIndex increment, tabla):
 def verificareCastigator(tabla, marimeTabla)-> bool:
     #verificarea liniilor
     for linie in range(0, marimeTabla):
-        #creez o lista cu caracterele de pe liniamn
-        listPozitii =crearelist(linie * marimeTabla, marimeTabla, 1 , tabla)
-        #TODO: folosit doar pentru afisarea continutului listei la verificarea Lintilor
-        print(f'Linii verticale: {listPozitii}*)
-        #verificare daca pe Linia n este aceasi secventa de caractere
+        #creez o listă cu caracterele de pe linia n
+        listPozitii = creareList(linie * marimeTabla, marimeTabla, 1 , tabla)
+        #TODO: folosit doar pentru afișarea conținutului listei la verificarea liniilor
+        print(f'Linii verticale: {listPozitii}')
+        #verificare dacă pe linia n este aceeași secvență de caractere
         if algVerificareLinii(listPozitii) == 1: return True
 
     #verificarea coloanelor
     for coloana in range(0, marimeTabla):
-        #crearea Listei cu cdracterele de pe coloana n
+        #crearea listei cu cdracterele de pe coloana n
         listPozitii = creareList(coloana, marimeTabla, marimeTabla, tabla)
-        #TODO: folosit doar pentru afisarea continutulut array utut la verificarea tintilor
+        #TODO: folosit doar pentru afișarea conținutului array-ului la verificarea liniilor
         print(f'Linii orizontale: {listPozitii}')
-        #verificare daca pe coloana n este aceeasi secventa de caractere
+        #verificare dacă pe coloana n este aceeași secvență de caractere
         if algVerificareLinii(listPozitii) == 1: return True
 
-    #verificane diagonata principata
-    #crearea Listei cu caracterele de pe diagonala principala
+    #verificare diagonală principală
+    #crearea listei cu caracterele de pe diagonala principală
     listPozitii = creareList(0, marimeTabla, marimeTabla + 1, tabla)
-    #TODO: folosit doar pentru ofisareo continutului array ului la verificarea Lintilor
+    #TODO: folosit doar pentru afișarea conținutului array-ului la verificarea liniilor
     print(f'Linii diagonala principala: {listPozitii}')
-    #verificare daca pe diagonala principala este aceasi secventa de caractere
+    #verificare dacă pe diagonala principală este aceeași secvență de caractere
     if algVerificareLinii(listPozitii) == 1: return True
 
-    #verificare diagonala secundara
-    #crearea Listei cu caracterele de pe diagonata secundana
+    #verificare diagonală secundară
+    #crearea listei cu caracterele de pe diagonala secundară
     listPozitii = creareList(marimeTabla - 1, marimeTabla, marimeTabla - 1, tabla)
-    #TODO: folosit doar pentru afisarea continutului array ului la verificarea Lintilor
-    print(f'Linii diagonala secundara: {listPozitii}')
+    #TODO: folosit doar pentru afișarea conținutului array-ului la verificarea liniilor
+    print(f'Linii diagonală secundară: {listPozitii}')
     #verificore daca pe diagonala secundara este aceasi secventa de caractere
-    if algVerificareLinii(listPozitii) == 1; return True
+    if algVerificareLinii(listPozitii) == 1: return True
 
 ################################# DE AICI INCEPE JOCUL ###########################################0#
 caracterTablaGoala = "_"
 tabla = []
 
 print('Marime decomandata: 3, 5, 7')
-#initalizare marimea tablei
-print('Specificati marimea tablei.")
+#Inițializare mărime tablă
+print('Specificați mărimea tablei:')
 marimeTabla = setMarimeTabla()
 
-#Initializare tabla goala si afisarea ei
+#Inițializare tablă goală și afișarea ei
 countPozitii = 0
 for pozitie in range(0, marimeTabla * marimeTabla):
     print(caracterTablaGoala, end=" ")
-    #ereorea orray ului pentru stocarea continututui toblet de joc
+    #crearea array-ului pentru stocarea conținutului tablei de joc
     tabla += caracterTablaGoala
     countPozitii += 1
-    if(countPozitii == marimeTabla)
+    if(countPozitii == marimeTabla):
         print()
         countPozitii = 0
 
-##stant jocm##
-#progresloc = folosit sa numar etopele de joc
+##Start joc###
+#progresJoc = folosit să număr etapele de joc
 progresJoc = 0
 jucator = ''
-while progresJoc != marimeTabla * marimeTabla
-    #alegereo pozititlor de catre jucatori
+while progresJoc != marimeTabla * marimeTabla:
+    #alegerea pozițiilor de către jucatori
     if progresJoc % 2 == 0:
-        #randul jucatorului x
-        jucator = X'
+        #rândul jucătorului x
+        jucator = 'X'
         pozitie =selectiePozitie(tabla, jucator, marimeTabla)
         tabla[pozitie-1] = jucator
 
     else:
-        #randul jucatorulut 0
-        jucator = 0
+        #rândul jucătoruluti 0
+        jucator = '0'
         pozitie =selectiePozitie(tabla, jucator, marimeTabla)
         tabla[pozitie-1] = jucator
 
-    #randore tabla de joc
+    #randare tabla de joc
     afisareTabla(tabla)
 
-    #vertficare castigator
+    #verificare câștigător
     if verificareCastigator(tabla, marimeTabla) == True:
-        print(f'Felicitari! Jucatorul {jucator} a castigat.')
+        print(f'Felicitări! Jucătorul {jucator} a câștigat.')
         break
 
 progresJoc += 1
