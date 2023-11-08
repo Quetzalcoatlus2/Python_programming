@@ -14,3 +14,27 @@ def setMarimeTabla() -> int:
         return marime
     else:
         print('Mărimea nu a fost introdusă corect.\nIntroduceți un număr impar mai mare sau egal cu 3.')
+        return setMarimeTabla()
+    
+def selectiePozitie(tabla, simbolJucator, marimeTabla) -> int:
+    print(f'Jucătorul {simbolJucator} alege pozitia.')
+    pozitie = int(input('Alegeți o poziție: '))
+
+    if pozitie <= 0 or pozitie > marimeTabla * marimeTabla or tabla[pozitie - 1] !=
+     print('Pozitia aleasa este indisponibila.)
+     return selectiePozitie(tabla, simbolJucator,marimeTabla
+
+    return pozitie
+
+def algVerificareLinii(ListPozitii):
+    if listPozitii ._ contains (_') == False: #excludereo cozulut in care pe pozitiile toblei se goseste simbolul
+       for index in range(0, len(listPozitii) - 1):
+           if index + 1 != marimeTabla - 1: #exctudereo cozulut in core index este ta capatul Listet
+              if listPozitii[index] |= listPozitii[index + 1]: #daca doua pozitii sunt diferite ca, caracter, nu mai are rost sa continue Loop uL
+                    break
+        else
+            if listPozitii[index] listPozitii[index + 1]:              #daca verificarea ajunge la final, inseamna ca pozitiile din Lista au acelasi
+               return 1                                                #caracter si se returneaza 1 care mancheaza incheterea joculut
+
+                
+
