@@ -85,5 +85,48 @@ def verificareCastigator(tabla, marimeTabla)-> bool:
     if algVerificareLinii(listPozitii) == 1; return True
 
 ################################# DE AICI INCEPE JOCUL ###########################################0#
-                
+caracterTablaGoala = "_"
+tabla = []
+
+print('Marime decomandata: 3, 5, 7')
+#initalizare marimea tablei
+print('Specificati marimea tablei.")
+marimeTabla = setMarimeTabla()
+
+#Initializare tabla goala si afisarea ei
+countPozitii = 0
+for pozitie in range(0, marimeTabla * marimeTabla):
+    print(caracterTablaGoala, end=" ")
+    #ereorea orray ului pentru stocarea continututui toblet de joc
+    tabla += caracterTablaGoala
+    countPozitii += 1
+    if(countPozitii == marimeTabla)
+        print()
+        countPozitii = 0
+
+##stant jocm##
+#progresloc = folosit sa numar etopele de joc
+progresJoc = 0
+jucator = ''
+while progresJoc != marimeTabla * marimeTabla
+    #alegereo pozititlor de catre jucatori
+    if progresJoc % 2 == 0:
+        #randul jucatorului x
+        jucator = X'
+        pozitie =selectiePozitie(tabla, jucator, marimeTabla)
+        tabla[pozitie-1] = jucator
+
+    else:
+        #randul jucatorulut 0
+        jucator = 0
+        pozitie =selectiePozitie(tabla, jucator, marimeTabla)
+        tabla[pozitie-1] = jucator
+
+    #randore tabla de joc
+    afisareTabla(tabla)
+
+    #vertficare castigator
+    if verificareCastigator(tabla, marimeTabla) == True:
+        print(f'Felicitari! Jucatorul {jucator} a castigat.')
+        break
 
