@@ -29,5 +29,5 @@ def VictoryFor(board, sign):
 def DrawMove(board):
 #
 # the function draws the computer's move and updates the board
-
+ 
 #
