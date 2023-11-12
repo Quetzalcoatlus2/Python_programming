@@ -1,8 +1,7 @@
 def DisplayBoard(board):
 #
 
-    print("+--------+----------+---------+\n|   	|   	|   	|\n|     1     |     2     |      3    |\n|   	|   	|   	|\n
-     +--------+----------+---------+")
+    print("+--------+----------+---------+\n|   	|   	|   	|\n|     1     |     2     |      3    |\n|   	|   	|   	|\n +--------+----------+---------+")
 
 # the function accepts one parameter containing the board's current status
 # and prints it out to the console
@@ -30,4 +29,5 @@ def VictoryFor(board, sign):
 def DrawMove(board):
 #
 # the function draws the computer's move and updates the board
+
 #
