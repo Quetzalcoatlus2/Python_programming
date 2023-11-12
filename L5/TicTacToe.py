@@ -115,12 +115,19 @@ while progresJoc != marimeTabla * marimeTabla:
         jucator = 'X'
         pozitie =selectiePozitie(tabla, jucator, marimeTabla)
         tabla[pozitie-1] = jucator
+        progresJoc = progresJoc + 1
 
     else:
         #rândul jucătoruluti 0
         jucator = '0'
         pozitie =selectiePozitie(tabla, jucator, marimeTabla)
-        tabla[pozitie-1] = jucator
+        tabla[pozitie-1] = jucator 
+        progresJoc = progresJoc + 1
+
+
+
+
+        
 
     #randare tabla de joc
     afisareTabla(tabla)
