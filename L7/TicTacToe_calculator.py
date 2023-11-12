@@ -23,7 +23,7 @@ def MakeListOfFreeFields(board):
 def VictoryFor(board, sign):
 #
 # the function analyzes the board status in order to check if
-# the player using 'O's or 'X's has won the game
+# the player using 'O's or 'X's has won the game 
 #
 
 def DrawMove(board):
