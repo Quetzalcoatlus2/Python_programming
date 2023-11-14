@@ -2,7 +2,7 @@ import sqlite3
 
 
 #conn = None
-conn = sqlite3.connect("db1.db")
+conn = sqlite3.connect(r"C:\Users\teodo\Desktop\SQLite\db1.db")
       
 
 
