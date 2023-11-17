@@ -25,4 +25,4 @@ finally:
     if connection.is_connected():
         cursor.close()
         connection.close()
-        print("MySQL connection is closed")
+        print("MySQL connection is closed") 
