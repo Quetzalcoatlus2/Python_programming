@@ -1,11 +1,12 @@
 import mysql.connector
 from mysql.connector import Error
 
+
 try:
-    connection = mysql.connector.connect(host='sql11.freemysqlhosting.net',
-                                         database='sql11662854',
-                                         user='sql11662854',
-                                         password='USx5upjQ3R')
+   connection = mysql.connector.connect(host='sql11.freemysqlhosting.net',
+                                        database='sql11662854',
+                                        user='sql11662854',
+                                        password='USx5upjQ3R')
    if connection.is_connected():
        db_Info = connection.get_server_info()
        print("Connected to MySQL Server version ", db_Info)
@@ -25,3 +26,4 @@ finally:
    if connection.is_connected():
        cursor.close()
        connection.close()
+       print("MySQL connection is closed")
