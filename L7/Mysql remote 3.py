@@ -12,16 +12,18 @@ try:
        print("Connected to MySQL Server version ", db_Info)
        cursor = connection.cursor()
        #cursor.execute("select database();")
-       query = '''CREATE TABLE noteTAD (
-   id  INTEGER NOT NULL PRIMARY KEY UNIQUE,
-   nume    TEXT,
-   prenume TEXT,
-   n1  INTEGER,
-   n2  INTEGER
-);'''
+       query = """SELECT * FROM noteTAD;"""
        cursor.execute(query)
-       record = cursor.fetchone()
-       print("You're connected to database: ", record)
+       record = cursor.fetchall()
+       print(record)
+       for row in record:
+           print(row[1],(row[3] + row[4])/2)
+
+
+
+
+
+
 
 
 except Error as e:
@@ -30,4 +32,4 @@ finally:
    if connection.is_connected():
        cursor.close()
        connection.close()
-       print("MySQL connection is closed")
+print("MySQL connection is closed")
