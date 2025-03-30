@@ -1,4 +1,2 @@
-# Repository-ul-meu
+# Python anul 3
 Repository folosit pentru Programare Python
-
-schimbare
